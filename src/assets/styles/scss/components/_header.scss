@@ -1,0 +1,24 @@
+#header{
+    background-color: $main-theme-background-01;
+    @include box-shadow( 0px 2px 5px -2px rgba(0, 0, 0, .15));
+    position: relative;
+
+    .content{
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .inbox-user-name{
+        color: $main-theme-color-02;
+        width: calc(100% - 110px);
+        font-size: 1.38em;
+        font-weight: 400;
+        margin-left: 15px;
+    }
+
+    .inbox-user-image{
+        width: 50px;
+        height: 50px;
+    }
+}

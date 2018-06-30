@@ -1,0 +1,18 @@
+<header id="header">
+    <div class="content">
+        <img src="https://storage.googleapis.com/cloudprod-apiai/67517462-b2ab-4fa8-8149-12b33a759209_l.png" alt="JuninhoBot" width="50" class="inbox-user-image">
+        <h1 class="inbox-user-name">JuninhoBot</h1>
+    </div>
+</header>
+<main id="chat">
+    <div class="content message-thread" id="chat-c">
+        <ng-container *ngFor="let message of messages | async">
+            <div class="message balloon" [ngClass]="{ 'p1' : message.sendBy === 'bot', 'p2' : message.sendBy === 'user' }"> {{ message.contet }} </div>
+        </ng-container>
+    </div>
+</main>
+<div id="form-message">
+    <div class="content">
+        <input type="text" name="message-to-send" class="message input-field" [(ngModel)]="formValue" (keyup.enter)="sendMessage()" placeholder="Digite aqui..." id="message">
+    </div>
+</div>
